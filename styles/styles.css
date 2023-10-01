@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    /*background: linear-gradient(to top left, #FFBBCB, #DFFFFA );
+    background-attachment: fixed;*/
+    background-color: #FFDFF6;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;
+    transition: padding-top 0.9s ease;
+}
+
+.tprin {
+    text-align: center;
+    font-family: 'Courgette', cursive;
+    color: #333333;
+    font-size: 20px;
+}
+
+
+p {
+    text-align: justify;
+    padding-left: 20px;
+
+    /* Puedes ajustar este valor según tu preferencia */
+}
+
+.encabezado {
+    background-color: #FFA8BD;
+    color: #fff;
+    padding: 8px 20px;
+    /* Reducido el padding arriba y abajo */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    /* Tamaño de fuente reducido */
+    text-align: center;
+    /* Centra el texto en el encabezado */
+    transition: transform 1.5s ease-out;
+}
+
+.encabezado.oculto {
+    transform: translateY(-100%);
+    /* Mueve el encabezado fuera de la pantalla cuando está oculto */
+}
+
+.hamburguesa {
+    font-size: 24px;
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 50px;
+    z-index: 3;
+    color: black;
+    padding: 10px;
+    border-radius: 90%;
+}
+
+
+.menu-lateral {
+    width: 250px;
+    height: 100vh;
+    background-color: #DCF3F3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    z-index: 1;
+    padding-top: 100px;
+    transition: left 0.3s ease;
+}
+
+.menu-lista {
+    list-style: none;
+    padding: 10;
+    width: 100%;
+}
+
+.menu-lista li {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.menu-lista li a {
+    color: #000;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    display: block;
+    transition: background-color 0.9s ease-in-out;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    font-size: 2em;
+    /* Tamaño de fuente en relación con el tamaño del texto circundante */
+}
+
+.menu-lista li a:hover {
+    background-color: #FFA8BD;
+    /* Cambiado el color de fondo al color del encabezado */
+    color: #fff;
+    /* Cambiado el color del texto al blanco para mejorar la legibilidad */
+}
+
+.contenido {
+    padding: 110px 20px 20px;
+    /* Ajusta el padding para crear espacio en la parte superior del contenido */
+    transition: margin-left 0.6s ease-in-out;
+}
+
+.menu-lateral.activo {
+    left: 0;
+}
+
+.contenido.activo {
+    margin-left: 250px;
+    transition: margin-left 0.1s ease-in-out;
+}
+
+.textopag {
+    color: #000;
+}
+
+.footer,
+.pie-de-pagina {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #FFA8BD;
+    color: #4B4B4B;
+    padding: 3px;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.galeria {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.imagen {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.imagen.visible {
+    display: block;
+}
+
+#anterior, #siguiente {
+    font-size: 24px;
+    cursor: pointer;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* Estilo para los títulos y descripciones */
+.imagen h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.imagen p {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
