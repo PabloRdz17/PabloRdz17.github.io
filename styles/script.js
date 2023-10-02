@@ -1,6 +1,7 @@
 var encabezado = document.querySelector('.encabezado');
 var lastScrollTop = 0;
 
+
 function animarFondoDegradado() {
     var elemento = document.body;
     var colores = ['#FFDFF6','#FFD2E3','#ECE1EC','FFD6DF']; // Lista de colores degradados
@@ -17,6 +18,7 @@ function animarFondoDegradado() {
     setInterval(cambiarFondo, 2300); // Cambia cada 3 segundos (3000 milisegundos)
 }
 
+
 // Llamar a la función cuando se cargue la página
 window.onload = animarFondoDegradado;
 
@@ -30,15 +32,6 @@ document.addEventListener("DOMContentLoaded", function () {
         menuLateral.classList.toggle('activo');
         contenido.classList.toggle('activo');
         encabezado.classList.toggle('oculto');
-        document.getElementById('anterior').classList.toggle('oculto'); // Oculta/muestra la flecha izquierda
-        document.getElementById('siguiente').classList.toggle('oculto'); // Oculta/muestra la flecha derecha
-    
-        if (document.getElementById('anterior').classList.contains('oculto')) {
-            // Ajusta el margen izquierdo del contenido cuando las flechas están ocultas
-            contenido.style.marginLeft = '10px'; // Ajusta según el ancho de las flechas
-        } else {
-            contenido.style.marginLeft = '70px'; // Ajusta según el ancho de las flechas
-        }
     });
     
 
@@ -81,26 +74,3 @@ window.addEventListener('scroll', function () {
 
     lastScrollTop = scrollTop;
 });
-
-let indiceImagen = 0;
-const imagenes = document.querySelectorAll('.imagen');
-
-function mostrarImagen(indice) {
-    imagenes.forEach((imagen) => {
-        imagen.classList.remove('visible');
-    });
-    imagenes[indice].classList.add('visible');
-}
-
-document.getElementById('siguiente').addEventListener('click', function() {
-    indiceImagen = (indiceImagen + 1) % imagenes.length;
-    mostrarImagen(indiceImagen);
-});
-
-document.getElementById('anterior').addEventListener('click', function() {
-    indiceImagen = (indiceImagen - 1 + imagenes.length) % imagenes.length;
-    mostrarImagen(indiceImagen);
-});
-
-// Mostrar la primera imagen al cargar la página
-mostrarImagen(indiceImagen);

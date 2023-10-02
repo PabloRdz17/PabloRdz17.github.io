@@ -12,7 +12,7 @@ body {
     text-align: center;
     font-family: 'Courgette', cursive;
     color: #333333;
-    font-size: 20px;
+    font-size: 21px;
 }
 
 
@@ -137,39 +137,81 @@ p {
     font-size: 14px;
 }
 
-.galeria {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+.cosas {
+    counter-reset: item;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.elementos{
     position: relative;
-}
-
-.imagen {
-    display: none;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.imagen.visible {
-    display: block;
-}
-
-#anterior, #siguiente {
-    font-size: 24px;
-    cursor: pointer;
-    color: #555;
-    margin-top: 10px;
-}
-
-/* Estilo para los títulos y descripciones */
-.imagen h2 {
-    font-size: 18px;
     margin-bottom: 10px;
+    padding-left: 30px;
+    font-size: 16px;
+    color: #333;
 }
 
-.imagen p {
-    font-size: 14px;
-    color: #777;
-    margin-bottom: 20px;
+.elementos::before {
+    content: counter(item);
+    counter-increment: item;
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 24px;
+    font-weight: bold;
+    color: #A754DF;
 }
 
+/* Estilos CSS para la lista de dos columnas */
+/* Estilos CSS para la lista de dos columnas */
+.two-column-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    justify-content: center; /* Centra los elementos en el contenedor */
+}
+
+.two-column-list li {
+    flex: 1 0 40%; /* Esto controla el ancho de las columnas y el espacio entre ellas */
+    margin: 10px; /* Espacio entre elementos de la lista */
+    text-align: center;
+}
+
+/* Estilos para el botón de la lista */
+/* Estilos para el botón de la lista */
+.two-column-list li a {
+    display: block;
+    padding: 20px;
+    border: 2px solid #3498db;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    border-radius: 10px;
+    text-decoration: none; /* Evita el subrayado del texto */
+    transition: all 0.3s ease;
+}
+
+.two-column-list li a:hover, .two-column-list li a:focus {
+    background-color: #d1c4e9;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.two-column-list li a:visited {
+    color: #2c3e50; /* Establece el color después de visitado */
+}
+
+.imagen-container {
+    display: inline-block;
+    margin: 10px;
+    text-align: center;
+}
+
+.imagen-container img {
+    width: 200px; /* Establece el ancho de las imágenes */
+    height: auto;
+}
