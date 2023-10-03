@@ -1,11 +1,10 @@
 body {
     margin: 0;
-    /*background: linear-gradient(to top left, #FFBBCB, #DFFFFA );
-    background-attachment: fixed;*/
     background-color: #FFDFF6;
     font-family: Arial, sans-serif;
     padding-top: 50px;
     transition: padding-top 0.9s ease;
+    font-size: 16px;
 }
 
 .tprin {
@@ -19,7 +18,8 @@ body {
 p {
     text-align: justify;
     padding-left: 20px;
-
+    font-family: 'Spectral', serif;
+    font-size: 25px;
     /* Puedes ajustar este valor según tu preferencia */
 }
 
@@ -38,6 +38,7 @@ p {
     text-align: center;
     /* Centra el texto en el encabezado */
     transition: transform 1.5s ease-out;
+    font-size: 20px;
 }
 
 .encabezado.oculto {
@@ -95,19 +96,16 @@ p {
     font-family: 'Dancing Script', cursive;
     font-weight: bold;
     font-size: 2em;
-    /* Tamaño de fuente en relación con el tamaño del texto circundante */
 }
 
 .menu-lista li a:hover {
     background-color: #FFA8BD;
-    /* Cambiado el color de fondo al color del encabezado */
     color: #fff;
-    /* Cambiado el color del texto al blanco para mejorar la legibilidad */
+
 }
 
 .contenido {
-    padding: 110px 20px 20px;
-    /* Ajusta el padding para crear espacio en la parte superior del contenido */
+    padding: 70px 20px 20px;
     transition: margin-left 0.6s ease-in-out;
 }
 
@@ -149,7 +147,8 @@ p {
     position: relative;
     margin-bottom: 10px;
     padding-left: 30px;
-    font-size: 16px;
+    font-size: 21px;
+    font-family: 'Marck Script', cursive;
     color: #333;
 }
 
@@ -164,34 +163,33 @@ p {
     color: #A754DF;
 }
 
-/* Estilos CSS para la lista de dos columnas */
-/* Estilos CSS para la lista de dos columnas */
 .two-column-list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     padding: 0;
-    justify-content: center; /* Centra los elementos en el contenedor */
+    justify-content: center;
+    flex: 1 0 90%;
 }
 
 .two-column-list li {
-    flex: 1 0 40%; /* Esto controla el ancho de las columnas y el espacio entre ellas */
-    margin: 10px; /* Espacio entre elementos de la lista */
+    flex: 1 0 40%;
+    margin: 10px;
     text-align: center;
+    
 }
 
-/* Estilos para el botón de la lista */
-/* Estilos para el botón de la lista */
+
 .two-column-list li a {
     display: block;
     padding: 20px;
     border: 2px solid #3498db;
-    background-color: #ecf0f1;
+    background-color: #dcaceb;
     color: #2c3e50;
-    font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-family: 'Marck Script', cursive;
+    font-size: 23px;
     border-radius: 10px;
-    text-decoration: none; /* Evita el subrayado del texto */
+    text-decoration: none; 
     transition: all 0.3s ease;
 }
 
@@ -202,7 +200,7 @@ p {
 }
 
 .two-column-list li a:visited {
-    color: #2c3e50; /* Establece el color después de visitado */
+    color: #2c3e50; 
 }
 
 .imagen-container {
@@ -212,6 +210,11 @@ p {
 }
 
 .imagen-container img {
-    width: 200px; /* Establece el ancho de las imágenes */
+    width: 200px; 
     height: auto;
+}
+.subtitulos
+{
+    font-family: 'Satisfy', cursive;
+    font-size: 28px;
 }
